@@ -23,8 +23,9 @@ El archivo routes.js de cada proyecto contiene las funciones principales que pue
 ## Pasos para ejecutar el proyecto:
 - Para utilizar estas funciones de PRODUCTOS es necesario loggearse en sesion con el usuario correspondiente de la siguiente forma:
 * `http://localhost:8080/api/session/login`.
+
+EJEMPLO DE ACCESO COMO ADMINISTRADOR:
 ```
-EJEMPLO DE USUARIO ADMINISTRADOR:
 {
   "email": "adminCoder@coder.com",
   "password": "adminCod3r123"
@@ -99,15 +100,20 @@ ProjectManager - ECOMMERCE
   - `src\routes\carts.routes.js` define las rutas relacionadas con los endpoints de la API para los carritos de compras, como crear un nuevo carrito, obtener información sobre los carritos existentes y añadir productos a los carritos.
   - `src\routes\index.js` define las rutas principales de la API. Aquí se importan y se montan las rutas relacionadas con los productos y los carritos.
   - `src\routes\products.routes.js` define las rutas relacionadas con los endpoints de la API para los productos, como obtener información sobre los productos existentes.
+  - `src\routes\session.routes.js`: contiene las definiciones de las rutas relacionadas con la gestión de sesiones de usuario en la aplicación. Incluye rutas para crear usuario, iniciar sesión, cerrar sesión.
   
   - `src/dao` contiene la lógica de acceso a datos. Está organizado para soportar diferentes métodos de almacenamiento, como el sistema de archivos y MongoDB.
     
   - `src/dao/models` contiene los modelos de datos para la aplicación, definidos utilizando Mongoose para MongoDB.
   - `src/dao/models/cart.model.js` define el esquema del carrito de compra para MongoDB.
   - `src/dao/models/product.model.js` define el esquema del producto para MongoDB.
+  - `src/dao/models/user.model.js`: define cómo se estructuran y comportan los datos de usuario en la base de datos o en la aplicación.
 
   - `src/dao/mongoDao` contiene la implementación del manejo de datos utilizando MongoDB.
   - `src/dao/mongoDao/cart.dao.js` maneja la lógica relacionada con los carritos de compra utilizando MongoDB.
   - `src/dao/mongoDao/product.dao.js` maneja la lógica relacionada con los productos utilizando MongoDB.
+  - `src\dao\mongoDao\user.dao.js`: contiene funciones y lógica para interactuar con la base de datos MongoDB para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) relacionadas con los usuarios.
+
+  - `src\middlewares\isLogin.middleware.js`: es un middleware utilizado en las rutas para verificar si un usuario está autenticado o ha iniciado sesión antes de permitir el acceso a ciertas partes de la aplicación.
 
   - `src/config/mongoDB.config.js` contiene la lógica para conectar a la base de datos y otras configuraciones relacionadas con MongoDB.
