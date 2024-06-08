@@ -1,4 +1,4 @@
-# ProductManager Y CartManager (Servidor web y Express Avanzado - Implementacion de MongoDB)
+# ProductManager Y CartManager (Servidor web y Express Avanzado - Implementacion de MongoDB y Sesiones de LOGIN/LOGOUT)
 
 El proyecto de ProductManager se enfoca en la gestión de un catálogo de productos como objetos.
 En el archivo `src\routes\products.routes.js`, creamos las peticiones principales que incluyen las siguientes funciones:
